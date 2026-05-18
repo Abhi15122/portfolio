@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "motion/react";
-import { Briefcase, GraduationCap, MapPin, User } from "lucide-react";
+import { Briefcase, GraduationCap, MapPin } from "lucide-react";
 import { about } from "@/data/about";
 import SectionHeading from "@/components/ui/SectionHeading";
 import FadeIn from "@/components/animations/FadeIn";
@@ -30,10 +30,8 @@ export default function About() {
                     "radial-gradient(circle at 30% 20%, #d8ff4a 0%, transparent 50%)",
                 }}
               />
-              <div className="absolute inset-0 flex flex-col items-center justify-center gap-4 text-muted">
-                <User className="size-12 opacity-50" />
-                <p className="text-xs uppercase tracking-[0.25em]">Portrait placeholder</p>
-                <p className="text-[10px] text-muted/70">TODO: Abhi — add real photo</p>
+              <div className="absolute inset-0 flex items-center justify-center text-muted">
+                <p className="text-xs uppercase tracking-[0.25em]">photo</p>
               </div>
               <div className="absolute bottom-4 left-4 right-4 flex items-center justify-between text-xs text-muted">
                 <span>{about.location}</span>
