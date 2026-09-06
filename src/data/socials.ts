@@ -6,7 +6,7 @@ export interface Social {
 
 export const socials: Social[] = [
   { name: "GitHub", href: "https://github.com/Abhi15122", handle: "@Abhi15122" },
-  { name: "LinkedIn", href: "https://linkedin.com/in/", handle: "TODO: Abhi — add LinkedIn handle" },
+  { name: "LinkedIn", href: "https://www.linkedin.com/in/abhi-verma-7b2260250/", handle: "@abhiverma" },
   { name: "Email", href: "mailto:abhinav15122@gmail.com", handle: "abhinav15122@gmail.com" },
 ];
 

@@ -110,11 +110,7 @@ export default async function ProjectPage({
                 </div>
               ))}
             </div>
-          ) : (
-            <p className="mt-20 text-xs uppercase tracking-[0.25em] text-muted">
-              TODO: Abhinav — add screenshots
-            </p>
-          )}
+          ) : null}
         </div>
       </main>
     </>

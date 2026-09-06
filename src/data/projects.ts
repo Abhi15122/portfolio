@@ -19,14 +19,47 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    slug: "nexthire-ai",
+    title: "NextHire AI",
+    year: "2026",
+    tagline:
+      "AI-powered mock-interview platform with tailored question generation and feedback.",
+    description:
+      "Full-stack mock-interview application built with Next.js, Clerk authentication, Groq AI, and Neon PostgreSQL through Drizzle ORM.",
+    cover: "/images/projects/nexthire-ai.png",
+    tech: ["Next.js", "JavaScript", "Clerk", "Groq AI", "Neon", "Drizzle ORM"],
+    liveUrl: null,
+    repoUrl: "https://github.com/Abhi15122/Nexthire-AI-",
+    detail: {
+      overview:
+        "NextHire AI helps users practice interviews by generating role-specific questions and saving their responses for later review.",
+      problem:
+        "Interview preparation is difficult when practice questions are generic and there is no structured way to track answers over time.",
+      solution:
+        "Built Next.js API routes that use Groq to generate interview questions. Clerk manages authentication, while Neon PostgreSQL and Drizzle ORM store interviews and answers. User ownership checks ensure users can access and update only their own interview records.",
+      results:
+        "Users can create tailored mock interviews, save or update answers, and review their interview feedback in one place.",
+      screenshots: [],
+    },
+  },
+  {
     slug: "airbnb-clone",
     title: "Airbnb Clone",
     year: "2025",
-    tagline: "Full-stack rental platform — auth, listings, bookings, image uploads.",
+    tagline:
+      "Full-stack rental platform — auth, listings, bookings, image uploads.",
     description:
       "End-to-end rental platform built with Next.js App Router on the frontend and an Express.js REST API on the backend. JWT auth, MongoDB Atlas data, and Cloudinary image pipeline.",
     cover: "/images/projects/airbnb-clone.png",
-    tech: ["Next.js", "Express.js", "MongoDB Atlas", "Mongoose", "JWT", "Cloudinary", "Tailwind"],
+    tech: [
+      "Next.js",
+      "Express.js",
+      "MongoDB Atlas",
+      "Mongoose",
+      "JWT",
+      "Cloudinary",
+      "Tailwind",
+    ],
     liveUrl: "https://airbnb-fullstack-orcin.vercel.app/",
     repoUrl: "https://github.com/Abhi15122/airbnb-fullstack-",
     detail: {
@@ -47,22 +80,22 @@ export const projects: Project[] = [
     slug: "ganesh-auto-spare-hubs",
     title: "Ganesh Auto Spare Hubs",
     year: "2025",
-    tagline: "Freelance SSR site for a local auto-spares business.",
+    tagline: "Collaborative Next.js catalogue site for a local auto-spares business.",
     description:
-      "SEO-optimized Next.js site shipped end-to-end for a paying freelance client. SSR for crawlability, Tailwind for the design system, EmailJS for the inquiry form.",
+      "Collaborative business website built with Next.js, dynamic product-category routing, Tailwind CSS, and EmailJS customer enquiries.",
     cover: "/images/projects/ganesh-auto-spare-hubs.png",
     tech: ["Next.js", "React.js", "Tailwind CSS", "SSR", "EmailJS"],
-    liveUrl: "https://ganesh-auto-spare-hub-qfse.vercel.app/",
-    repoUrl: null,
+    liveUrl: "https://ganesh-auto-spare-hub-six.vercel.app/",
+    repoUrl: "https://github.com/Abhi15122/Ganesh-auto-spare-hub",
     detail: {
       overview:
-        "A freelance project for a local auto-spares retailer that needed a fast, search-friendly online presence. Delivered the brief end-to-end — requirements, design choices, build, deploy.",
+        "Collaborative website project for a local auto-spares business that needed a fast, searchable online presence and a simple way to receive customer enquiries.",
       problem:
-        "The client needed a site Google could actually index, a way for customers to send inquiries without a backend, and a layout that looked professional on mobile and desktop with no maintenance overhead.",
+        "The business needed customers to browse product categories easily, send enquiries online, and use the site comfortably on mobile and desktop.",
       solution:
-        "Built on Next.js with server-side rendering so every page is crawlable. Modular UI in React + Tailwind CSS. Dynamic routing with Next.js Link prefetching for instant in-site navigation. EmailJS API hooked up to the inquiry form, which means real-time customer messages land in the client's inbox with zero backend infrastructure to run.",
+        "The project uses Next.js with dynamic routes for product categories, modular React and Tailwind CSS components, and EmailJS for enquiry delivery without maintaining a separate backend.",
       results:
-        "Live on Vercel. Owner gets inquiries directly to email. SEO baseline in place — page metadata, structured headings, image alts.",
+        "Deployed on Vercel with searchable product categories, responsive navigation, and an email-based enquiry flow.",
       screenshots: [
         // TODO: Abhi — add screenshots
       ],
@@ -72,7 +105,8 @@ export const projects: Project[] = [
     slug: "ecommerce-platform",
     title: "E-commerce Platform",
     year: "2024",
-    tagline: "Storefront with cart, dynamic routing, and TypeScript end-to-end.",
+    tagline:
+      "Storefront with cart, dynamic routing, and TypeScript end-to-end.",
     description:
       "Full-stack e-commerce storefront built with Next.js, React, and TypeScript. Cart state via Context API, Tailwind UI, image-optimized product pages.",
     cover: "/images/projects/ecommerce-platform.png",
