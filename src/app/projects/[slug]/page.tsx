@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { about } from "@/data/about";
 import { notFound } from "next/navigation";
 import { ArrowLeft, ArrowUpRight } from "lucide-react";
 import { GithubIcon } from "@/components/ui/BrandIcons";
@@ -18,7 +19,7 @@ export async function generateMetadata({
   const project = getProject(slug);
   if (!project) return { title: "Project not found" };
   return {
-    title: `${project.title} — Abhinav Verma`,
+    title: `${project.title} | ${about.name}`,
     description: project.tagline,
   };
 }
@@ -96,7 +97,7 @@ export default async function ProjectPage({
             <Block label="Overview" body={project.detail.overview} />
             <Block label="Problem" body={project.detail.problem} />
             <Block label="Solution" body={project.detail.solution} />
-            <Block label="Results" body={project.detail.results} />
+            <Block label="Current features" body={project.detail.results} />
           </div>
 
           {project.detail.screenshots.length ? (

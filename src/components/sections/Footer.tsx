@@ -26,7 +26,7 @@ export default function Footer() {
 
         <div className="flex items-center gap-6 text-xs text-muted">
           <a
-            href="https://github.com/Abhi15122"
+            href="https://github.com/Abhi15122/portfolio"
             target="_blank"
             rel="noopener noreferrer"
             data-cursor="hover"

@@ -16,7 +16,7 @@ export default function Projects() {
   return (
     <section id="projects" className="relative py-24 md:py-32 px-6 md:px-10 bg-canvas">
       <div className="max-w-7xl mx-auto">
-        <SectionHeading eyebrow="Selected Projects" title="Work I'm proud of." />
+        <SectionHeading eyebrow="Selected Projects" title="Projects I've built." />
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
           <div className="lg:col-span-5 hidden lg:block sticky top-32">
@@ -111,9 +111,9 @@ export default function Projects() {
                     <p className="text-muted text-sm mt-2">{p.tagline}</p>
                     <div className="flex lg:hidden mt-3 gap-4 text-xs">
                       {p.liveUrl ? (
-                        <span className="text-accent">View live →</span>
+                        <span className="text-accent">Demo in details →</span>
                       ) : null}
-                      {p.repoUrl ? <span className="text-muted">Source →</span> : null}
+                      {p.repoUrl ? <span className="text-muted">Code in details →</span> : null}
                     </div>
                   </div>
                   <ArrowUpRight className="size-6 text-muted group-hover:text-accent transition-colors -translate-x-1 group-hover:translate-x-0 group-hover:-translate-y-1 motion-safe:transition-transform" />

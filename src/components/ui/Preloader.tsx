@@ -60,7 +60,7 @@ export default function Preloader() {
             <span className="text-accent">.</span>
           </div>
           <div className="text-xs uppercase tracking-[0.3em] text-muted mb-4">
-            Abhinav Verma — Portfolio
+            Abhi Verma · Portfolio
           </div>
           <div
             className="absolute left-0 bottom-0 h-px bg-accent"

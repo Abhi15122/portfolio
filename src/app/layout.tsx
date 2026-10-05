@@ -24,12 +24,12 @@ const instrumentSerif = Instrument_Serif({
 });
 
 export const metadata: Metadata = {
-  title: "Abhi Verma — Full-Stack Web Developer",
+  title: "Abhi Verma | Full-Stack Web Developer",
   description:
-    "Abhi Verma is a Full-Stack Web Developer based in Delhi, India. B.Tech (ECE) at MAIT, graduating June 2026. Building with React, Next.js, Node.js, Express, and MongoDB.",
+    "Abhi Verma is a full-stack web developer based in Delhi. Explore projects built with React, Next.js, Node.js, Express, and MongoDB.",
   metadataBase: new URL("https://portfolio-a-1.vercel.app"),
   openGraph: {
-    title: "Abhi Verma — Full-Stack Web Developer",
+    title: "Abhi Verma | Full-Stack Web Developer",
     description: "Portfolio of Abhi Verma. Full-Stack Web Developer. MAIT '26.",
     type: "website",
   },

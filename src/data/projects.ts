@@ -23,9 +23,9 @@ export const projects: Project[] = [
     title: "NextHire AI",
     year: "2026",
     tagline:
-      "AI-powered mock-interview platform with tailored question generation and feedback.",
+      "Interview practice with AI-generated questions and feedback.",
     description:
-      "Full-stack mock-interview application built with Next.js, Clerk authentication, Groq AI, and Neon PostgreSQL through Drizzle ORM.",
+      "A mock interview application using Next.js, Clerk, Groq, and Neon PostgreSQL with Drizzle ORM.",
     cover: "/images/projects/nexthire-ai.png",
     tech: ["Next.js", "JavaScript", "Clerk", "Groq AI", "Neon", "Drizzle ORM"],
     liveUrl: null,
@@ -34,22 +34,22 @@ export const projects: Project[] = [
       overview:
         "NextHire AI helps users practice interviews by generating role-specific questions and saving their responses for later review.",
       problem:
-        "Interview preparation is difficult when practice questions are generic and there is no structured way to track answers over time.",
+        "I wanted a way to practice questions for a specific role and review previous answers.",
       solution:
         "Built Next.js API routes that use Groq to generate interview questions. Clerk manages authentication, while Neon PostgreSQL and Drizzle ORM store interviews and answers. User ownership checks ensure users can access and update only their own interview records.",
       results:
-        "Users can create tailored mock interviews, save or update answers, and review their interview feedback in one place.",
+        "Users can create a mock interview, save or update their answers, and review AI-generated feedback.",
       screenshots: [],
     },
   },
   {
     slug: "airbnb-clone",
-    title: "Airbnb Clone",
+    title: "StayFinder",
     year: "2025",
     tagline:
-      "Full-stack rental platform — auth, listings, bookings, image uploads.",
+      "An Airbnb-inspired rental project with listings, sign-in, and booking APIs.",
     description:
-      "End-to-end rental platform built with Next.js App Router on the frontend and an Express.js REST API on the backend. JWT auth, MongoDB Atlas data, and Cloudinary image pipeline.",
+      "A Next.js frontend with an Express REST API, MongoDB, and JWT authentication. The booking API validates dates, guest limits, and existing reservations.",
     cover: "/images/projects/airbnb-clone.png",
     tech: [
       "Next.js",
@@ -57,20 +57,20 @@ export const projects: Project[] = [
       "MongoDB Atlas",
       "Mongoose",
       "JWT",
-      "Cloudinary",
-      "Tailwind",
+      "bcrypt",
+      "Tailwind CSS",
     ],
-    liveUrl: "https://airbnb-fullstack-orcin.vercel.app/",
-    repoUrl: "https://github.com/Abhi15122/airbnb-fullstack-",
+    liveUrl: "https://stayfinder-abhi.vercel.app/",
+    repoUrl: "https://github.com/Abhi15122/stayfinder",
     detail: {
       overview:
-        "A production-style rental platform clone. Frontend is Next.js App Router; backend is a separate Express.js REST API talking to MongoDB Atlas. The two halves are wired with JWT auth and Cloudinary for image uploads.",
+        "StayFinder is an Airbnb-inspired rental project. It uses Next.js for the frontend and a separate Express API with MongoDB for listings, users, and bookings.",
       problem:
-        "Most clones stop at the UI. I wanted the full loop: real auth, a real schema, real validation, and a backend that doesn't crumble the moment two users book the same listing.",
+        "I wanted to understand how rental listings, user authentication, and booking validation work together in a full-stack application.",
       solution:
-        "Designed 10+ REST endpoints covering auth, listings, and bookings — each with validation and error handling. JWT with bcrypt hashing for credentials, Express middleware for protected routes. Bookings model uses MongoDB date-range overlap queries (lt/gt) so double bookings are rejected at the data layer, not the UI layer. Users, Listings, and Bookings are Mongoose models linked by ObjectId refs and .populate(). Image uploads go through Cloudinary with .env-secured API keys.",
+        "The Express API uses JWT authentication, bcrypt password hashing, and Mongoose models. Booking routes check date order, guest limits, and overlaps with existing reservations, calculate prices on the server, and let users view or cancel their own bookings.",
       results:
-        "End-to-end rental flow works in production. Search → detail → date selection → booking → confirmation. Auth-protected dashboard for listing management. Deployed to Vercel.",
+        "The project includes listing pages, authentication, and booking APIs. It is still under development, with complete UI flows, payments, and host listing management outside the current implementation.",
       screenshots: [
         // TODO: Abhi — add screenshots into public/images/projects/ and reference here
       ],
@@ -80,22 +80,22 @@ export const projects: Project[] = [
     slug: "ganesh-auto-spare-hubs",
     title: "Ganesh Auto Spare Hubs",
     year: "2025",
-    tagline: "Collaborative Next.js catalogue site for a local auto-spares business.",
+    tagline: "A catalogue and enquiry website for a local auto-spares business.",
     description:
-      "Collaborative business website built with Next.js, dynamic product-category routing, Tailwind CSS, and EmailJS customer enquiries.",
+      "A collaborative Next.js project with product-category pages, search, and an EmailJS enquiry form.",
     cover: "/images/projects/ganesh-auto-spare-hubs.png",
     tech: ["Next.js", "React.js", "Tailwind CSS", "SSR", "EmailJS"],
     liveUrl: "https://ganesh-auto-spare-hub-six.vercel.app/",
     repoUrl: "https://github.com/Abhi15122/Ganesh-auto-spare-hub",
     detail: {
       overview:
-        "Collaborative website project for a local auto-spares business that needed a fast, searchable online presence and a simple way to receive customer enquiries.",
+        "A collaborative website for a local auto-spares business, with product categories and a customer enquiry form.",
       problem:
-        "The business needed customers to browse product categories easily, send enquiries online, and use the site comfortably on mobile and desktop.",
+        "Customers needed a way to browse product categories and ask about parts from a phone or computer.",
       solution:
         "The project uses Next.js with dynamic routes for product categories, modular React and Tailwind CSS components, and EmailJS for enquiry delivery without maintaining a separate backend.",
       results:
-        "Deployed on Vercel with searchable product categories, responsive navigation, and an email-based enquiry flow.",
+        "The site is deployed on Vercel and includes category search, responsive navigation, and an enquiry form configured with EmailJS.",
       screenshots: [
         // TODO: Abhi — add screenshots
       ],
@@ -106,22 +106,22 @@ export const projects: Project[] = [
     title: "E-commerce Platform",
     year: "2024",
     tagline:
-      "Storefront with cart, dynamic routing, and TypeScript end-to-end.",
+      "A TypeScript storefront with product pages, a cart, and demo checkout.",
     description:
-      "Full-stack e-commerce storefront built with Next.js, React, and TypeScript. Cart state via Context API, Tailwind UI, image-optimized product pages.",
+      "A frontend storefront built with Next.js, React, and TypeScript. It uses Context API for the cart and includes product search and a demo checkout.",
     cover: "/images/projects/ecommerce-platform.png",
     tech: ["Next.js", "React.js", "TypeScript", "Context API", "Tailwind CSS"],
     liveUrl: "https://e-commerce-platform-wine-nine.vercel.app/",
     repoUrl: "https://github.com/Abhi15122/E-commerce-Platform",
     detail: {
       overview:
-        "A full-stack e-commerce storefront. Browse products, drop them in the cart, run through a flow that feels like a real shop.",
+        "A frontend e-commerce project where users can browse a static product catalogue, manage a cart, and try a demo checkout.",
       problem:
-        "I wanted to get TypeScript-fluent and ship something with proper state — a cart that survives navigation, product pages that load fast, and a layout that holds up at every breakpoint.",
+        "I built this to practice TypeScript, dynamic product routes, and shared cart state in React.",
       solution:
-        "Next.js App Router for dynamic product routes. React Context API for cart state shared across the tree. Tailwind for responsive UI. next/image for optimized product imagery. react-toastify for real-time add-to-cart feedback. Full TypeScript coverage from components down to product data.",
+        "Next.js handles product routes, while React Context API manages the cart and localStorage stores its contents. The checkout validates customer details and opens a confirmation page. Product pages use next/image and show feedback when an item is added to the cart.",
       results:
-        "Live on Vercel. Cart persists during the session, product pages load fast, mobile experience matches desktop.",
+        "Deployed on Vercel with product browsing, search, cart controls, and a demo checkout. Checkout does not process payments or create real orders.",
       screenshots: [
         // TODO: Abhi — add screenshots
       ],

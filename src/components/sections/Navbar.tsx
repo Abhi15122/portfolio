@@ -2,6 +2,7 @@
 
 import { motion, useMotionValueEvent, useScroll } from "motion/react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { navLinks } from "@/data/socials";
 import MagneticButton from "@/components/ui/MagneticButton";
@@ -9,6 +10,7 @@ import ThemeToggle from "@/components/ui/ThemeToggle";
 import { getLenis } from "@/lib/lenis";
 
 export default function Navbar() {
+  const pathname = usePathname();
   const { scrollY } = useScroll();
   const [scrolled, setScrolled] = useState(false);
 
@@ -16,9 +18,11 @@ export default function Navbar() {
 
   const handleAnchor = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     if (!href.startsWith("#")) return;
-    e.preventDefault();
+    if (pathname !== "/") return;
     const el = document.querySelector(href);
     if (!el) return;
+    e.preventDefault();
+    window.history.pushState(null, "", href);
     const lenis = getLenis();
     if (lenis) lenis.scrollTo(el as HTMLElement, { offset: -80 });
     else el.scrollIntoView({ behavior: "smooth", block: "start" });
@@ -48,7 +52,7 @@ export default function Navbar() {
           {navLinks.map((l) => (
             <a
               key={l.href}
-              href={l.href}
+              href={pathname === "/" ? l.href : `/${l.href}`}
               onClick={(e) => handleAnchor(e, l.href)}
               className="text-muted hover:text-ink transition-colors"
               data-cursor="hover"
@@ -61,7 +65,7 @@ export default function Navbar() {
         <div className="flex items-center gap-3">
           <ThemeToggle />
           <MagneticButton
-            asLink={{ href: "#contact" }}
+            asLink={{ href: pathname === "/" ? "#contact" : "/#contact" }}
             className="bg-accent text-accent-ink hover:bg-[#e3ff60]"
           >
             Let&apos;s talk

@@ -17,7 +17,7 @@ export default function Stack() {
   return (
     <section id="stack" className="relative py-24 md:py-32 px-6 md:px-10 bg-canvas">
       <div className="max-w-7xl mx-auto">
-        <SectionHeading eyebrow="Stack" title="Things I reach for." />
+        <SectionHeading eyebrow="Stack" title="Tools I use." />
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12">
           {stackCategories.map((cat, ci) => {

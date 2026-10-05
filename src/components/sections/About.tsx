@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "motion/react";
+import Image from "next/image";
 import { Briefcase, GraduationCap, MapPin } from "lucide-react";
 import { about } from "@/data/about";
 import SectionHeading from "@/components/ui/SectionHeading";
@@ -17,7 +18,7 @@ export default function About() {
   return (
     <section id="about" className="relative py-24 md:py-32 px-6 md:px-10">
       <div className="max-w-7xl mx-auto">
-        <SectionHeading eyebrow="About" title="A developer who cares about the small stuff." />
+        <SectionHeading eyebrow="About" title="A little about me." />
 
         <div className="grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-16 items-start">
           <FadeIn className="md:col-span-5">
@@ -30,14 +31,18 @@ export default function About() {
                     "radial-gradient(circle at 30% 20%, #d8ff4a 0%, transparent 50%)",
                 }}
               />
-              <div className="absolute inset-0 flex items-center justify-center text-muted">
-                <p className="text-xs uppercase tracking-[0.25em]">photo</p>
-              </div>
-              <div className="absolute bottom-4 left-4 right-4 flex items-center justify-between text-xs text-muted">
+              <Image
+                src="/images/abhi-verma.png"
+                alt="Abhi Verma wearing glasses and a dark blazer"
+                fill
+                sizes="(min-width: 1280px) 480px, (min-width: 768px) 42vw, 100vw"
+                className="object-cover object-top"
+              />
+              <div className="absolute bottom-4 left-4 right-4 flex items-center justify-between text-xs text-ink bg-canvas/80 rounded-lg p-2">
                 <span>{about.location}</span>
                 <span className="flex items-center gap-2">
                   <span className="size-1.5 rounded-full bg-accent" />
-                  {about.available ? "Available" : "Booked"}
+                  {about.available ? "Available" : "Not available"}
                 </span>
               </div>
             </div>
